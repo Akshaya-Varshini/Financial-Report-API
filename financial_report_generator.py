@@ -69,8 +69,8 @@ class EnhancedFinancialReportGenerator:
         """Initialize with API keys - make them configurable"""
         # Use environment variables or default keys
         import os
-        self.GEMINI_API_KEY = gemini_api_key or os.getenv('GEMINI_API_KEY')
-        self.PDFCO_API_KEY = pdfco_api_key or os.getenv('PDFCO_API_KEY')
+        self.GEMINI_API_KEY = os.getenv('GEMINI_API_KEY')
+        self.PDFCO_API_KEY = os.getenv('PDFCO_API_KEY')
         self.QUICKCHART_URL = "https://quickchart.io/chart/create"
 
         # Configure Gemini AI
